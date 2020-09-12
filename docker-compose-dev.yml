@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  gzwww:
+    image: 'app'
+    build:
+      context: .
+      args:
+       MODE: development
+    restart: always
+    environment:
+      MODE: development
+      PUBLIC_URL: https://groundzerohk.com
+      PUBLIC_HOST: http://localhost:3000
+      BASE_URL: /
+      # DATABASE_URL: ${DATABASE_URL}
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./build:/opt/app/build
+      - ./src:/opt/app/src
+      - ./package.json:/opt/app/package.json
+    entrypoint: /opt/app/entrypoint.sh
+    command: start
+
+networks:
+  default:
+    external:
+      name: farm
