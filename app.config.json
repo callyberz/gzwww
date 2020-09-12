@@ -7,13 +7,6 @@
          "appLanguage": "en-US",
          "crystallizeCatalogueLanguage": "en",
          "defaultCurrency": "USD"
-      },
-      {
-         "displayName": " zh",
-         "urlPrefix": " zh",
-         "appLanguage": "en-US",
-         "crystallizeCatalogueLanguage": " zh",
-         "defaultCurrency": "USD"
       }
    ],
    "paymentProviders": []
